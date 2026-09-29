@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion'
-import { ChevronDown, Linkedin, Github, Eye, Download } from 'lucide-react'
+import { ChevronDown, Linkedin, Github, Eye, Download, FileText } from 'lucide-react'
 import { useState } from 'react'
 
 const Hero = () => {
   const [showResumeModal, setShowResumeModal] = useState(false)
+  const [showCoverLetterModal, setShowCoverLetterModal] = useState(false)
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
@@ -82,6 +83,13 @@ const Hero = () => {
                 <Eye size={20} />
                 View Resume
               </button>
+              <button
+                onClick={() => setShowCoverLetterModal(true)}
+                className="px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center gap-2"
+              >
+                <FileText size={20} />
+                Cover Letter
+              </button>
             </div>
           </motion.div>
         </motion.div>
@@ -134,6 +142,48 @@ const Hero = () => {
                 className="w-full h-full"
                 style={{ minHeight: '600px' }}
                 title="Resume PDF"
+              />
+            </div>
+          </motion.div>
+        </div>
+      )}
+
+      {showCoverLetterModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" onClick={() => setShowCoverLetterModal(false)}>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            className="relative bg-slate-900 rounded-2xl shadow-2xl max-w-5xl w-full max-h-[90vh] overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between p-6 border-b border-slate-700">
+              <h3 className="text-2xl font-bold text-slate-100">Cover Letter - Nitin Dixit</h3>
+              <div className="flex items-center gap-3">
+                <a
+                  href="/Nitin_Dixit_Cover_Letter.pdf"
+                  download
+                  className="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-medium transition-all duration-300 flex items-center gap-2"
+                >
+                  <Download size={18} />
+                  Download
+                </a>
+                <button
+                  onClick={() => setShowCoverLetterModal(false)}
+                  className="text-slate-400 hover:text-slate-100 transition-colors"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div className="overflow-auto" style={{ height: 'calc(90vh - 88px)' }}>
+              <iframe
+                src="/Nitin_Dixit_Cover_Letter.pdf"
+                className="w-full h-full"
+                style={{ minHeight: '600px' }}
+                title="Cover Letter PDF"
               />
             </div>
           </motion.div>

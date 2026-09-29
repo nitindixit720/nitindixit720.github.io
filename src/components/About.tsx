@@ -8,7 +8,7 @@ const About = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   const highlights = [
-    { icon: Code2, text: '8+ Years Experience', color: 'text-primary-400' },
+    { icon: Code2, text: '9 Years Experience', color: 'text-primary-400' },
     { icon: Rocket, text: 'CI/CD Expert', color: 'text-purple-400' },
     { icon: Users, text: 'Team Leadership', color: 'text-green-400' },
     { icon: Award, text: 'Enterprise Delivery', color: 'text-yellow-400' },
@@ -36,19 +36,19 @@ const About = () => {
               className="space-y-6"
             >
               <p className="text-lg text-slate-300 leading-relaxed">
-                With <span className="text-primary-400 font-semibold">8+ years of experience</span> in QA Automation, 
-                I specialize in building scalable test frameworks that drive quality at enterprise scale. My expertise 
-                spans <span className="text-primary-400 font-semibold">UI and API automation</span> for web and mobile 
-                platforms, leveraging tools like Selenium, Cypress, and REST Assured.
+                With <span className="text-primary-400 font-semibold">9 years of experience</span> in QA Automation,
+                I specialize in building scalable test frameworks that drive quality at enterprise scale. My expertise
+                spans <span className="text-primary-400 font-semibold">UI and API automation</span> for web and mobile
+                platforms, leveraging tools like Selenium, Playwright, Cypress, and REST Assured.
               </p>
               <p className="text-lg text-slate-300 leading-relaxed">
-                I've successfully integrated automation suites into <span className="text-primary-400 font-semibold">CI/CD pipelines</span>, 
-                reducing regression cycles by up to 50% and improving release quality for major clients including UBS. 
-                My focus is on delivering measurable impact through robust test strategies and continuous testing practices.
+                I've successfully integrated automation suites into <span className="text-primary-400 font-semibold">CI/CD pipelines</span>,
+                reducing regression cycles by up to 50% and improving release quality for major clients including UBS and TransAmerica
+                in the banking and insurance domain. I also use agentic AI tools like Kiro to boost engineering productivity.
               </p>
               <p className="text-lg text-slate-300 leading-relaxed">
-                Currently seeking opportunities in <span className="text-primary-400 font-semibold">Spain</span>, 
-                I bring strong leadership experience in mentoring teams and driving automation excellence across 
+                Based in <span className="text-primary-400 font-semibold">Pune, India</span>,
+                I bring strong leadership experience in mentoring teams and driving automation excellence across
                 Banking, FinTech, AgriTech, and SaaS domains.
               </p>
             </motion.div>

@@ -10,16 +10,32 @@ const Experience = () => {
   const experiences = [
     {
       company: 'Synechron',
-      client: 'UBS',
       location: 'Pune, MH',
       role: 'Lead QA Engineer',
       duration: 'Feb 2025 – Present',
-      achievements: [
-        'Designed and enhanced scalable UI automation frameworks using Selenium, Java, TestNG, and BDD for critical banking workflows',
-        'Implemented API automation using Rest Assured for microservices-based systems, reducing integration defects',
-        'Integrated automation suites into Jenkins CI/CD pipelines for continuous testing and faster feedback',
-        'Performed root cause analysis to reduce recurring defects and production leakage',
-        'Mentored junior QA engineers on framework design, automation best practices, and Agile testing',
+      clients: [
+        {
+          name: 'TransAmerica',
+          duration: 'Nov 2025 – Present',
+          achievements: [
+            'Identified and verified API test cases with the Product team, organizing test cases and test runs in qTest',
+            'Built an API automation framework from scratch using Java, REST Assured, and BDD (Cucumber), with JaCoCo for code coverage',
+            'Added performance testing (load, stress, and endurance) using concurrent REST Assured requests, with Chart.js trend reports',
+            'Created parameterized Jenkins jobs for functional and performance runs, with automated email reporting (Extent and Chart.js)',
+            'Integrated the framework with qTest to auto-sync test cases, execution status, and failure logs',
+            'Used Kiro agentic AI for coding assistance, increasing productivity by up to 60%',
+          ],
+        },
+        {
+          name: 'UBS',
+          duration: 'Feb 2025 – Oct 2025',
+          achievements: [
+            'Contributed to the design and enhancement of the Selenium WebDriver + Java automation framework, developing scalable and reusable test cases',
+            'Authored and ran manual test cases using Squash, ensuring full functional coverage',
+            'Built strong domain knowledge in banking processes, enabling accurate validation of business workflows',
+            'Guided a 2-member QA team, fostering collaboration and improving delivery quality',
+          ],
+        },
       ],
     },
     {
@@ -87,12 +103,7 @@ const Experience = () => {
               >
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
                   <div>
-                    <h3 className="text-2xl font-bold text-slate-100 mb-2">
-                      {exp.company}
-                      {exp.client && (
-                        <span className="text-primary-400"> (Client: {exp.client})</span>
-                      )}
-                    </h3>
+                    <h3 className="text-2xl font-bold text-slate-100 mb-2">{exp.company}</h3>
                     <div className="flex items-center gap-2 text-slate-400 mb-2">
                       <Briefcase size={18} />
                       <span className="text-lg font-semibold text-slate-300">{exp.role}</span>
@@ -110,14 +121,35 @@ const Experience = () => {
                   </div>
                 </div>
 
-                <ul className="space-y-3">
-                  {exp.achievements.map((achievement, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-slate-300">
-                      <span className="text-primary-400 mt-1.5 flex-shrink-0">▹</span>
-                      <span>{achievement}</span>
-                    </li>
-                  ))}
-                </ul>
+                {exp.clients ? (
+                  <div className="space-y-6">
+                    {exp.clients.map((client, cIdx) => (
+                      <div key={cIdx} className={cIdx > 0 ? 'pt-6 border-t border-slate-700' : ''}>
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3 gap-1">
+                          <h4 className="text-lg font-semibold text-primary-400">Client: {client.name}</h4>
+                          <span className="text-sm text-slate-400">{client.duration}</span>
+                        </div>
+                        <ul className="space-y-3">
+                          {client.achievements.map((achievement, idx) => (
+                            <li key={idx} className="flex items-start gap-3 text-slate-300">
+                              <span className="text-primary-400 mt-1.5 flex-shrink-0">▹</span>
+                              <span>{achievement}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <ul className="space-y-3">
+                    {exp.achievements.map((achievement, idx) => (
+                      <li key={idx} className="flex items-start gap-3 text-slate-300">
+                        <span className="text-primary-400 mt-1.5 flex-shrink-0">▹</span>
+                        <span>{achievement}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </motion.div>
             ))}
           </div>

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Code, Cpu, Cloud, Wrench } from 'lucide-react'
+import { Code, Smartphone, Zap, Layers, Cloud, Wrench } from 'lucide-react'
 
 const Skills = () => {
   const ref = useRef(null)
@@ -12,25 +12,37 @@ const Skills = () => {
       title: 'Programming & Scripting',
       icon: Code,
       color: 'from-blue-500 to-cyan-500',
-      skills: ['Core Java', 'Python', 'Groovy'],
+      skills: ['Core Java', 'Python', 'JavaScript', 'Groovy'],
     },
     {
-      title: 'Automation & Testing',
-      icon: Cpu,
+      title: 'UI & Mobile Automation',
+      icon: Smartphone,
       color: 'from-purple-500 to-pink-500',
-      skills: ['Selenium', 'Cypress', 'Appium', 'Rest Assured', 'BDD / TDD', 'Framework Design'],
+      skills: ['Selenium WebDriver', 'Playwright', 'Cypress', 'Appium'],
+    },
+    {
+      title: 'API & Performance Testing',
+      icon: Zap,
+      color: 'from-yellow-500 to-orange-500',
+      skills: ['REST Assured', 'Postman', 'Python Requests', 'Load / Stress / Endurance Testing'],
+    },
+    {
+      title: 'Frameworks & Methodologies',
+      icon: Layers,
+      color: 'from-pink-500 to-rose-500',
+      skills: ['TestNG', 'Maven', 'POM', 'BDD (Cucumber)', 'TDD', 'Framework Design'],
     },
     {
       title: 'DevOps & Cloud',
       icon: Cloud,
       color: 'from-green-500 to-emerald-500',
-      skills: ['Jenkins', 'GitHub Actions', 'Docker', 'Kubernetes', 'AWS'],
+      skills: ['Jenkins', 'GitHub Actions', 'Docker', 'Kubernetes', 'AWS S3'],
     },
     {
-      title: 'Tools & Platforms',
+      title: 'Reporting, Tools & AI',
       icon: Wrench,
       color: 'from-orange-500 to-red-500',
-      skills: ['GitHub', 'JIRA', 'Confluence'],
+      skills: ['Extent', 'Allure', 'Chart.js', 'JaCoCo', 'qTest', 'JIRA', 'Confluence', 'Squash', 'Git', 'GitHub', 'Bitbucket', 'Agentic AI (Kiro)'],
     },
   ]
 

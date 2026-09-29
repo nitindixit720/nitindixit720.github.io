@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Award, TrendingUp, Users, Building2 } from 'lucide-react'
+import { Award, Star, Sparkles } from 'lucide-react'
 
 const Achievements = () => {
   const ref = useRef(null)
@@ -9,28 +9,22 @@ const Achievements = () => {
 
   const achievements = [
     {
-      icon: TrendingUp,
-      title: 'Automation Coverage Excellence',
-      description: 'Increased automation coverage from 40% to 85% across multiple projects',
+      icon: Sparkles,
+      title: 'Rising Star Award',
+      description: 'AgroStar, Sep 2018',
       color: 'from-blue-500 to-cyan-500',
     },
     {
       icon: Award,
-      title: 'Regression Cycle Reduction',
-      description: 'Reduced regression testing cycles by 50-60% through efficient framework design',
+      title: 'Extra Mile Award',
+      description: 'AgroStar, Sep 2020',
       color: 'from-purple-500 to-pink-500',
     },
     {
-      icon: Users,
-      title: 'Team Leadership & Mentorship',
-      description: 'Successfully mentored 4+ QA engineers on automation best practices and framework design',
+      icon: Star,
+      title: 'Wow Service Award',
+      description: 'Vegrow, Apr 2022',
       color: 'from-green-500 to-emerald-500',
-    },
-    {
-      icon: Building2,
-      title: 'Enterprise Client Delivery',
-      description: 'Delivered high-quality automation solutions for UBS and other enterprise clients',
-      color: 'from-orange-500 to-red-500',
     },
   ]
 
@@ -48,7 +42,7 @@ const Achievements = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-purple-500 mx-auto mb-16" />
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {achievements.map((achievement, index) => (
               <motion.div
                 key={index}

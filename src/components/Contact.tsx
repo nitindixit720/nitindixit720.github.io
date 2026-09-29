@@ -25,7 +25,7 @@ const Contact = () => {
     {
       icon: MapPin,
       label: 'Location',
-      value: 'Spain',
+      value: 'Pune, India',
       href: null,
       color: 'from-purple-500 to-pink-500',
     },
@@ -60,8 +60,7 @@ const Contact = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-purple-500 mx-auto mb-8" />
           <p className="text-center text-slate-400 text-lg mb-16 max-w-2xl mx-auto">
-            I'm currently seeking new opportunities in Spain. Feel free to reach out if you'd like to discuss 
-            QA automation, test frameworks, or potential collaborations.
+            Feel free to reach out if you'd like to discuss QA automation, test frameworks, or potential collaborations.
           </p>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
