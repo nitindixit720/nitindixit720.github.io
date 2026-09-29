@@ -78,7 +78,7 @@ const Hero = () => {
               </a>
               <button
                 onClick={() => setShowResumeModal(true)}
-                className="px-8 py-4 bg-green-600 hover:bg-green-700 text-white rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-green-500/50 flex items-center gap-2"
+                className="px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-primary-500/50 flex items-center gap-2"
               >
                 <Eye size={20} />
                 View Resume
@@ -121,7 +121,7 @@ const Hero = () => {
                 <a
                   href="/Nitin_Dixit_Lead_QA_Engineer.pdf"
                   download
-                  className="px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-all duration-300 flex items-center gap-2"
+                  className="px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-all duration-300 flex items-center gap-2"
                 >
                   <Download size={18} />
                   Download

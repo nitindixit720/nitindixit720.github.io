@@ -11,37 +11,31 @@ const Skills = () => {
     {
       title: 'Programming & Scripting',
       icon: Code,
-      color: 'from-blue-500 to-cyan-500',
       skills: ['Core Java', 'Python', 'JavaScript', 'Groovy'],
     },
     {
       title: 'UI & Mobile Automation',
       icon: Smartphone,
-      color: 'from-purple-500 to-pink-500',
       skills: ['Selenium WebDriver', 'Playwright', 'Cypress', 'Appium'],
     },
     {
       title: 'API & Performance Testing',
       icon: Zap,
-      color: 'from-yellow-500 to-orange-500',
       skills: ['REST Assured', 'Postman', 'Python Requests', 'Load / Stress / Endurance Testing'],
     },
     {
       title: 'Frameworks & Methodologies',
       icon: Layers,
-      color: 'from-pink-500 to-rose-500',
       skills: ['TestNG', 'Maven', 'POM', 'BDD (Cucumber)', 'TDD', 'Framework Design'],
     },
     {
       title: 'DevOps & Cloud',
       icon: Cloud,
-      color: 'from-green-500 to-emerald-500',
       skills: ['Jenkins', 'GitHub Actions', 'Docker', 'Kubernetes', 'AWS S3'],
     },
     {
       title: 'Reporting, Tools & AI',
       icon: Wrench,
-      color: 'from-orange-500 to-red-500',
       skills: ['Extent', 'Allure', 'Chart.js', 'JaCoCo', 'qTest', 'JIRA', 'Confluence', 'Squash', 'Git', 'GitHub', 'Bitbucket', 'Agentic AI (Kiro)'],
     },
   ]
@@ -70,7 +64,7 @@ const Skills = () => {
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 hover:border-primary-500 transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/10"
               >
                 <div className="flex items-center gap-4 mb-6">
-                  <div className={`p-3 rounded-lg bg-gradient-to-br ${category.color}`}>
+                  <div className="p-3 rounded-lg bg-gradient-to-br from-primary-500 to-purple-500">
                     <category.icon className="text-white" size={28} />
                   </div>
                   <h3 className="text-2xl font-bold text-slate-100">{category.title}</h3>

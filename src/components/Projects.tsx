@@ -18,7 +18,6 @@ const Projects = () => {
         'Achieved 85% automation coverage',
         'Integrated with CI/CD for continuous testing',
       ],
-      color: 'from-blue-500 to-cyan-500',
     },
     {
       title: 'Microservices API Automation Suite',
@@ -30,7 +29,6 @@ const Projects = () => {
         'Reduced integration defects by 40%',
         'Automated contract testing across services',
       ],
-      color: 'from-purple-500 to-pink-500',
     },
     {
       title: 'CI/CD Integrated Test Pipeline',
@@ -42,7 +40,6 @@ const Projects = () => {
         'Enabled continuous testing on every commit',
         'Reduced deployment time from days to hours',
       ],
-      color: 'from-green-500 to-emerald-500',
     },
     {
       title: 'Cross-Platform Test Automation',
@@ -54,7 +51,6 @@ const Projects = () => {
         'Validated UI consistency across 10+ devices',
         'Reduced manual testing effort by 50%',
       ],
-      color: 'from-orange-500 to-red-500',
     },
   ]
 
@@ -82,7 +78,7 @@ const Projects = () => {
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 hover:border-primary-500 transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/10"
               >
                 <div className="flex items-center gap-4 mb-6">
-                  <div className={`p-3 rounded-lg bg-gradient-to-br ${project.color}`}>
+                  <div className="p-3 rounded-lg bg-gradient-to-br from-primary-500 to-purple-500">
                     <project.icon className="text-white" size={28} />
                   </div>
                   <h3 className="text-xl font-bold text-slate-100">{project.title}</h3>

@@ -35,14 +35,12 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      href: '#',
-      color: 'hover:text-blue-400',
+      href: 'https://www.linkedin.com/in/nitindixit-720/',
     },
     {
       icon: Github,
       label: 'GitHub',
-      href: '#',
-      color: 'hover:text-slate-400',
+      href: 'https://github.com/nitindixit720',
     },
   ]
 
@@ -109,7 +107,9 @@ const Contact = () => {
                 <a
                   key={index}
                   href={social.href}
-                  className={`p-4 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl hover:border-primary-500 transition-all duration-300 ${social.color}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-4 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl hover:border-primary-500 hover:text-primary-400 transition-all duration-300"
                   aria-label={social.label}
                 >
                   <social.icon size={24} />

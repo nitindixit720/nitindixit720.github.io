@@ -12,19 +12,16 @@ const Achievements = () => {
       icon: Sparkles,
       title: 'Rising Star Award',
       description: 'AgroStar, Sep 2018',
-      color: 'from-blue-500 to-cyan-500',
     },
     {
       icon: Award,
       title: 'Extra Mile Award',
       description: 'AgroStar, Sep 2020',
-      color: 'from-purple-500 to-pink-500',
     },
     {
       icon: Star,
       title: 'Wow Service Award',
       description: 'Vegrow, Apr 2022',
-      color: 'from-green-500 to-emerald-500',
     },
   ]
 
@@ -53,7 +50,7 @@ const Achievements = () => {
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-purple-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300 opacity-0 group-hover:opacity-100" />
                 <div className="relative bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 hover:border-primary-500 transition-all duration-300">
-                  <div className={`inline-block p-4 rounded-xl bg-gradient-to-br ${achievement.color} mb-4`}>
+                  <div className="inline-block p-4 rounded-xl bg-gradient-to-br from-primary-500 to-purple-500 mb-4">
                     <achievement.icon className="text-white" size={32} />
                   </div>
                   <h3 className="text-xl font-bold text-slate-100 mb-3">{achievement.title}</h3>
